@@ -4,13 +4,11 @@ env.project_name = 'timothyfletcher.com'
 env.hosts = ['78.129.251.161:32214']
 env.user = 'wind'
 env.path = '/home/{user}/www/{project_name}'.format(**env)
-# env.virtualhost_path = env.path
 
 def update():
     with cd(env.path):
         run('git pull')
     restart_webserver()
-
 
 # -------------------------
 # --- Utility functions ---
